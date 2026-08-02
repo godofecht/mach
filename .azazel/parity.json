@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "repo": "mach",
+  "baseline": {
+    "command": [
+      "zig",
+      "build",
+      "--help"
+    ],
+    "expected_classification": "zig-toolchain",
+    "preferred_zig": "0.16"
+  },
+  "build": {
+    "command": [
+      "zig",
+      "build",
+      "--summary",
+      "all"
+    ],
+    "zig": "mach-2026.4.10",
+    "expected_classification": "missing-toolchain"
+  },
+  "azazel": {
+    "command": [
+      "azazel",
+      "parity",
+      "--manifest",
+      ".azazel/parity.json"
+    ],
+    "status": "scaffold-only",
+    "first_targets": [
+      "module:mach",
+      "examples",
+      "generated Vulkan bindings",
+      "asset steps"
+    ],
+    "system_deps": [],
+    "required_tools": [],
+    "pkg_config_libs": [],
+    "replacement_gaps": [
+      "custom Zig toolchain resolver",
+      "generated Vulkan bindings",
+      "asset pipeline"
+    ],
+    "integration_kind": "azazel",
+    "executable_parity": {
+      "status": "not-modeled",
+      "command": [],
+      "expected_classification": "not-modeled",
+      "targets": [],
+      "workdir": ".azazel/parity-work"
+    }
+  }
+}

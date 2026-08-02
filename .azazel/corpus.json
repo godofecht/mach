@@ -1,0 +1,49 @@
+{
+  "name": "mach",
+  "upstream": "hexops/mach",
+  "fork": "godofecht/mach",
+  "branch": "azazel-zaza-integration",
+  "notes": "game engine; generated bindings, assets, custom Zig lane",
+  "status": "integration scaffold",
+  "preferred_zig": "0.16",
+  "baseline_command": [
+    "zig",
+    "build",
+    "--help"
+  ],
+  "build_zig": "mach-2026.4.10",
+  "build_command": [
+    "zig",
+    "build",
+    "--summary",
+    "all"
+  ],
+  "expected_build_classification": "missing-toolchain",
+  "azazel_command": [
+    "azazel",
+    "parity",
+    "--manifest",
+    ".azazel/parity.json"
+  ],
+  "expected_baseline_classification": "zig-toolchain",
+  "first_targets": [
+    "module:mach",
+    "examples",
+    "generated Vulkan bindings",
+    "asset steps"
+  ],
+  "system_deps": [],
+  "required_tools": [],
+  "pkg_config_libs": [],
+  "replacement_gaps": [
+    "custom Zig toolchain resolver",
+    "generated Vulkan bindings",
+    "asset pipeline"
+  ],
+  "integration_kind": "azazel",
+  "parity_status": "scaffold-only",
+  "executable_parity_status": "not-modeled",
+  "executable_parity_command": [],
+  "expected_executable_parity_classification": "not-modeled",
+  "executable_parity_targets": []
+}
